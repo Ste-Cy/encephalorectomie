@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <%- include('ejs/partials/head.ejs') %>
+    <title>Votre panier</title>
+    <meta name="description" content="Votre pannier" />
+</head>
+
+<body>
+  <!-- ########## HEADER ########## -->
+  <header>
+    <%- include('ejs/partials/header.ejs') %>
+  </header>
+  <!-- ########## CONTENT ########## -->
+  <main class="basket-page">
+    <h1>Votre panier</h1>
+    <div class="basket-empty" id="basket-empty">
+      <p>Votre panier est vide</p>
+      <a class="btn" href="boutique.html">Voir nos produits</a>
+    </div>
+
+    <div class="basket-content" id="basket" hidden>
+      <div class="basket-tab">
+        <table class="number">
+          <thead>
+            <tr>
+              <th>Produit</th>
+              <th>Prix</th>
+              <th>Quantité</th>
+              <th>Sous total</th>
+            </tr>
+          </thead>
+          <tbody id="tab-data"></tbody>
+        </table>
+        <button class="btn btn-alt" id="delete-basket">Vider le panier</button>
+      </div>
+      <div class="order">
+        <ul>
+          <li id="order-subtotal">Total produits : <span class="number"></span></li>
+          <li id="order-shipping">Frais de port : <span class="number"></span></li>
+          <li id="order-total">Total (TTC) : <span class="number"></span></li>
+        </ul>
+        <a href="erreur-404.html" class="btn">Je commande !</a>
+      </div>
+    </div>
+  </main>
+  <!-- ########## FOOTER ########## -->
+  <footer>
+    <%- include('ejs/partials/footer.ejs') %>
+  </footer>
+  <%- include('ejs/partials/scripts.ejs') %>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+.error-404 {
+  @include tablet-up {
+    height: calc(100vh - 130px);
+    background-image: url(../assets/bg/error.webp);
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position: right 20px;
+    overflow: hidden;
+  }
+
+
+  h1 {
+    font-variant: small-caps;
+    font-size: 2rem;
+
+    @include tablet-up {
+      font-size: 5rem;
+      mix-blend-mode: multiply;
+    }
+
+    @include desktop-up {
+      font-size: 6rem;
+    }
+
+    span {
+      display: inline-block;
+      animation: fall 10s 3s ease-in both;
+      transform-origin: left center;
+      line-height: 1em;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet-up {
+      width: 50vw;
+
+      align-items: flex-end;
+    }
+
+    @include tablet-down {
+      padding-bottom: $size-base * 2;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+
+    @include tablet-up {
+      font-size: 2rem;
+      text-align: right;
+    }
+
+    @include desktop-up {
+      font-size: 3rem;
+    }
+  }
+
+}
+
+
+@keyframes fall {
+  0% {
+    transform: rotate(0deg);
+
+  }
+
+  85% {
+    transform: rotate(15deg);
+  }
+
+
+
+  90% {
+    transform: rotate(90deg) translateX(0);
+  }
+
+  100% {
+    transform: rotate(90deg) translateX(500px);
+
+  }
+}

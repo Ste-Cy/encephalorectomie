@@ -1,0 +1,90 @@
+// variables & mixins 
+
+// colors
+$primary-color: #0095A3;
+$secondary-color: #EDF2F9;
+$text-color: #6D6D6D;
+$primary-color-lighten : lighten($primary-color, 5%);
+
+// font
+$font: 'Raleway', sans-serif;
+$font-alt: 'Merriweather', serif;
+$font-number: 'Open Sans', sans-serif;
+$font-size: 1rem;
+
+// liens
+@mixin link {
+  a {
+    position: relative;
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: 0px;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform .5s ease;
+  }
+
+  a:hover::before {
+    transform: scaleX(1);
+  }
+
+}
+
+@mixin link-1 {}
+
+
+
+
+// shadow
+
+@mixin shadow-hight {
+  box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+  transition: box-shadow 10ms linear;
+}
+
+@mixin shadow-medium {
+  box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+  transition: box-shadow 10ms linear;
+}
+
+@mixin shadow-lite {
+  box-shadow: 1.6px 3.2px 3.2px hsl(0deg 0% 0% / 0.45);
+}
+
+
+// other
+$size-base: 16px;
+$outline-link : 1px dashed $text-color;
+
+// media queries 
+
+@mixin tablet-up {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media screen and (min-width:1024px) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media screen and (max-width: 767.99px) {
+    @content;
+  }
+}
+
+@mixin desktop-down {
+  @media screen and (max-width:1023.99px) {
+    @content;
+  }
+}

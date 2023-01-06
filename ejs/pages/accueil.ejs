@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <%- include('ejs/partials/head.ejs') %>
+    <title>
+      Découvrez l’Expircuzépram® - LA solution pour lutter contre les
+      encéphalorectomies.
+    </title>
+    <meta
+      name="description"
+      content="Médicament 100% naturel mis au point par le professeur Charles Attand de la clinique Richenou"
+    />
+  </head>
+
+  <body>
+    <!-- ########## HEADER ########## -->
+    <header><%- include('ejs/partials/header.ejs') %></header>
+    <!-- ########## CONTENT ########## -->
+    <main class="home">
+      <!--Section 1-->
+      <section class="presentation">
+        <div class="home-title">
+          <h1>Découvrez l’Expircuzépram®</h1>
+          <a href="#presentation"><i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+        <div class="presentation-container" id="presentation">
+          <div class="presentation-content">
+            <div class="presentation-img">
+              <img
+                class="area-2"
+                src="assets/img/charles-attand.jpg"
+                alt="Professeur Charles Attand"
+              />
+            </div>
+            <p>
+              Mis au point pendant des années de recherche par le professeur
+              <strong>Charles Attand</strong> au sein de la clinique
+              <strong>Richenou</strong>. <br />
+              <strong>L’Expircuzépram®</strong> est un médicament 100% naturel
+              et sans effets secondaires qui permet de retrouver toute votre
+              tête grâce à son principe actif révolutionnaire, le
+              <strong>poudreperlinpinpinium</strong> qui fonctionne grâce à la
+              mémoire de la résonnance quantique du champ magnétique de l’air
+              cosmique.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--Section 2-->
+
+      <section class="cta">
+        <video src="assets/bg/waves.mp4" autoplay loop></video>
+        <div class="cta-content">
+          <h2>N'attendez plus pour retrouver la fraicheur de votre tête !</h2>
+          <p>
+            En ce moment bénéficiez d'une <span>réduction de 30%</span> sur tous
+            nous produits
+          </p>
+          <a href="boutique.html" class="btn">j'y vais</a>
+        </div>
+      </section>
+      <!--Section 3-->
+      <section class="testimonials">
+        <h2>Les avis de nos clients</h2>
+        <div class="testimonials-slideshow">
+          <button id="testimonial-prev" class="slideshow-btn">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <div class="testimonials-content">
+            <figure class="testimonial-display" id="testimonial-1">
+              <blockquote>
+                <p>
+                  Grâce au traitement du <strong>professeur Attand</strong> je
+                  peux enfin être à la fois une employée compétente, une mère
+                  exemplaire, une ménagère efficace et une épouse dévouée
+                </p>
+              </blockquote>
+              <figcaption>Gisèle M.</figcaption>
+            </figure>
+            <figure id="testimonial-2">
+              <blockquote>
+                <p>
+                  Ce médicament est un vrai miracle. D’ailleurs c’est quantique
+                  donc c’est forcément magique !
+                </p>
+              </blockquote>
+              <figcaption>Nabilla B.</figcaption>
+            </figure>
+            <figure id="testimonial-3">
+              <blockquote>
+                <p>
+                  Je recommande <strong>L’Expircuzépram®</strong> à tous mes
+                  patients et ils s’en sont jamais plaint.
+                </p>
+              </blockquote>
+              <figcaption>Didier R.</figcaption>
+            </figure>
+          </div>
+          <button id="testimonial-next" class="slideshow-btn">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- ########## FOOTER ########## -->
+    <footer><%- include('ejs/partials/footer.ejs') %></footer>
+    <%- include('ejs/partials/scripts.ejs') %>
+  </body>
+</html>

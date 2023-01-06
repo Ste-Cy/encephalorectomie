@@ -1,0 +1,160 @@
+.landing-page {
+    height: 100vh;
+    overflow: hidden;
+
+    h1 {
+        font-size: 1.75rem;
+        height: 128px;
+        margin-bottom: 0;
+        font-weight: bolder;
+        animation: landing-page-title 5s linear both;
+
+        @include tablet-up {
+            font-size: 2.50rem;
+        }
+
+        @include desktop-up {
+            font-size: 4rem;
+        }
+    }
+
+    .background {
+        height: calc(100vh - 128px);
+
+        .circle {
+            width: 300px;
+            margin: auto;
+            opacity: 0.5;
+            position: relative;
+
+            .circle-out {
+                width: 300px;
+                height: 300px;
+                background-color: $secondary-color;
+                border-radius: 50%;
+                animation: landing-page-circle 1s 4s ease-out both;
+
+                @include tablet-up {
+                    width: 350px;
+                    height: 350px;
+                }
+
+                @include desktop-up {
+                    width: 400px;
+                    height: 400px;
+                }
+}
+
+            .circle-in {
+                width: 200px;
+                height: 200px;
+                background-color: $primary-color;
+                border-radius: 50%;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                animation: landing-page-circle 1s 5s ease-out both;
+
+                @include tablet-up {
+                    width: 250px;
+                    height: 250px;
+                }
+
+                @include desktop-up {
+                    width: 300px;
+                    height: 300px;
+                }
+
+            }
+        }
+
+        .image {
+            width: 100vw;
+            height: calc(100vh - 128px);
+            background-image: url(../assets/bg/landing-page.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            position: absolute;
+            bottom: 0px;
+            animation: landing-page-image 2s 6s ease-out both;
+
+        }
+
+    }
+
+    .content {
+        text-align: center;
+        animation: landing-page-content 1S 7s both;
+
+        p {
+            font-size: 1.50rem;
+            font-weight: bold;
+            color: black;
+            margin-bottom: $size-base * 2;
+            font-variant: small-caps;
+
+            @include tablet-up {
+                font-size: 1.75rem;
+            }
+
+            @include desktop-up {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+
+//****** ANIMATION ******//
+
+@keyframes landing-page-title {
+    0% {
+        opacity: 0;
+        filter: blur(5px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+
+    }
+}
+
+@keyframes landing-page-image {
+    0% {
+        transform: translateY(1000px);
+
+    }
+
+    50% {
+        filter: grayscale(0);
+        transform: translateY(0px);
+    }
+
+    100% {
+        filter: grayscale(1);
+    }
+}
+
+@keyframes landing-page-circle {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+
+    }
+}
+
+@keyframes landing-page-content {
+    0% {
+        transform: translateY(0);
+    }
+
+
+    100% {
+        transform: translateY(-200px)
+    }
+}

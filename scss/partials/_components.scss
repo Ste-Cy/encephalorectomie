@@ -1,0 +1,509 @@
+//****** buttons ******//
+.btn {
+  display: inline-block;
+  background-color: $primary-color;
+  color: white;
+  font-variant: small-caps;
+  letter-spacing: 0.1rem;
+  padding: ($size-base / 2) $size-base;
+  border-radius: 5px;
+  cursor: pointer;
+  @include shadow-hight;
+  
+
+  &:hover {
+    background: radial-gradient(circle, $primary-color-lighten, $primary-color);
+  }
+
+  &:active {
+    @include shadow-lite;
+  }
+}
+
+.btn.btn-alt {
+  background-color: #fff;
+  color: $text-color;
+  border: 1px solid $text-color;
+  @include shadow-medium;
+
+  &:hover {
+    background: $secondary-color;
+  }
+}
+
+//****** slideshow buttons ******//
+
+.slideshow-btn {
+  border: 0;
+  width: 32px;
+  font-size: 32px;
+  color: $primary-color;
+  cursor: pointer;
+
+
+  i {
+    &:hover {
+      color: $primary-color-lighten;
+    }
+
+    &:active {
+      outline: $outline-link;
+    }
+  }
+}
+
+//****** header ******//
+
+header {
+  height: 96px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+//****** topbar ******//
+.topbar {
+  display: none;
+
+  @include desktop-up {
+    font-size: 0.75rem;
+    color: #fff;
+    background-color: $secondary-color;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .contact {
+    display: flex;
+    position: relative;
+
+
+    a {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        bottom: 0px;
+        left: 0;
+        background-color: #fff;
+        transform: scaleX(0);
+        transition: transform .3s ease;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+
+    }
+  }
+
+  .tel {
+    width: 160px;
+    padding-left: $size-base;
+    background-color: $primary-color;
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    z-index: 1;
+
+  }
+
+  .mail {
+    width: 200px;
+    padding-left: $size-base * 2;
+    padding-right: $size-base;
+    background-color: $primary-color-lighten;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    position: relative;
+    left: -16px;
+  }
+
+  .contact,
+  .social-icons {
+    height: $size-base * 2;
+
+  }
+
+  p {
+    margin: 0;
+    padding-left: $size-base;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .social-icons {
+    width: 160px;
+    padding-left: $size-base;
+    padding-right: $size-base;
+    background-color: $primary-color;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform 0ms ease;
+
+    a:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+
+
+
+//****** navbar ******//
+.navbar {
+  padding: $size-base $size-base *2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: $size-base * 4;
+  @include shadow-medium;
+  transition: all .2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar.reduce {
+  @include desktop-up {
+    height: $size-base * 3;
+    transform: translateY(-32px);
+  }
+}
+
+
+
+//****** menu ******//
+.menu {
+  width: 100vw;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  margin-top: $size-base;
+  @include shadow-hight;
+
+  @include desktop-up {
+    width: auto;
+    margin-top: 0;
+    position: initial;
+    display: flex;
+  }
+
+  li {
+    border-bottom: 1px solid $text-color;
+    padding: $size-base $size-base * 2;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @include desktop-up {
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 0;
+      padding-right: $size-base;
+    }
+
+
+    &:hover {
+      background-color: $secondary-color;
+
+      @include desktop-up {
+        background-color: inherit;
+      }
+    }
+  }
+
+  a {
+    display: block;
+
+    @include desktop-up {
+      position: relative;
+
+      &:not(.home-link)::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        bottom: -6px;
+        left: 0;
+        background-color: $primary-color;
+        transform: scaleX(0);
+        transition: transform .3s ease;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .home-link {
+    @include desktop-up {
+      color: $primary-color;
+
+      &:hover {
+        color: $primary-color-lighten;
+      }
+    }
+  }
+
+
+
+  li:nth-child(1) {
+    border-top: 1px solid $text-color;
+
+    @include desktop-up {
+      border: none;
+    }
+  }
+
+  li:last-child {
+    @include desktop-up {
+      border: none;
+    }
+  }
+
+  a:active span {
+    outline: $outline-link;
+  }
+
+  .icon-home {
+    display: none;
+
+    @include desktop-up {
+      display: initial;
+    }
+  }
+
+  .text-home {
+    @include desktop-up {
+      display: none;
+    }
+  }
+}
+
+.navbar.reduce {
+  @include desktop-up {
+
+    .menu li,
+    .infos-basket li {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+
+
+//****** menu burger ******/
+.icon-menu {
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include desktop-up {
+    display: none;
+  }
+
+  &:hover div {
+    background-color: $primary-color-lighten;
+  }
+
+  div {
+    height: 4px;
+    background-color: $primary-color;
+    transition: transform 0.1s ease-in;
+  }
+}
+
+//****** menu close ******//
+
+.icon-menu.close div:nth-child(1) {
+  transform: rotate(45deg) translateY(-2px);
+  transform-origin: 0;
+}
+
+.icon-menu.close div:nth-child(2) {
+  display: none;
+}
+
+.icon-menu.close div:nth-child(3) {
+  transform: rotate(-45deg) translateY(2px);
+  transform-origin: 0;
+}
+
+.menu.close {
+  display: none;
+
+  @include desktop-up {
+    display: flex;
+    box-shadow: initial;
+  }
+}
+
+
+
+//****** infos basket ******//
+
+.basket-link {
+  &:hover {
+    @include desktop-up {
+      background-color: $secondary-color;
+    }
+  }
+
+  @include desktop-up {
+    border: 1px solid $text-color;
+    border-radius: 20px;
+    box-shadow: inset 0 0 8px $text-color;
+  }
+}
+
+
+
+.infos-basket {
+
+  @include desktop-up {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+
+    @include desktop-up {
+      padding: $size-base / 2 $size-base;
+    }
+  }
+
+  .price,
+  .items {
+    display: none;
+
+    @include desktop-up {
+      display: initial;
+    }
+  }
+}
+
+//****** icon basket ******//
+
+.icon-basket {
+  color: $primary-color;
+  font-size: 2rem;
+
+  @include desktop-up {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    color: $primary-color-lighten;
+  }
+
+  &:active {
+    outline: $outline-link;
+  }
+}
+
+//****** footer ******//
+
+footer {
+  padding: $size-base * 2;
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+
+  @include tablet-up {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  li {
+    list-style: none;
+    @include link;
+  }
+
+  >div {
+    margin-bottom: $size-base;
+
+    @include tablet-up {
+      width: 350px;
+    }
+
+    @include desktop-up {
+      width: auto;
+    }
+  }
+
+  >div:nth-child(2) {
+    @include desktop-up {
+      order: 1;
+    }
+  }
+
+
+  address {
+    width: 240px;
+    margin: auto;
+    border: dashed 1px white;
+    font-style: normal;
+    padding: $size-base;
+    padding-bottom: $size-base * 2;
+
+    p:nth-child(1) {
+      padding-bottom: $size-base;
+    }
+  }
+
+  .social-icons {
+    background-color: $primary-color;
+    position: relative;
+    top: -12px;
+    width: 160px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      transition: transform .3s ease;
+
+      &:hover {
+        transform: translateY(-6px);
+      }
+    }
+  }
+}
+
+//****** Basket add popup ******//
+
+.basket-popup {
+  border: 1px solid $text-color;
+  @include shadow-hight;
+}
+
+.basket-popup::backdrop {
+  @include shadow-hight;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet-up {
+    flex-direction: row;
+  }
+}
+
+dialog {
+  button {
+    display: block;
+    margin: $size-base;
+  }
+}

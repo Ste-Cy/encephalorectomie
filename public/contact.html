@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/styles.css" />
+<script src="https://kit.fontawesome.com/d16b05e8a9.js" crossorigin="anonymous"></script>
+
+    <title>Contactez-nous</title>
+    <meta name="description" content="Contactez-nous" />
+</head>
+
+<body>
+  <!-- ########## HEADER ########## -->
+  <header>
+    <!--Topbar-->
+<div class="topbar" id="topbar">
+  <div class="contact number">
+    <p class="tel"><a href="tel:+33966666666">+ 33 9 66 66 66 66</a></p>
+    <p class="mail"><a href="mailto:contact@richenou.com">contact@richenou.com</a></p>
+  </div>
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
+
+</div>
+<!--navbar-->
+<div class="navbar" id="navbar">
+  <nav>
+    <div class="icon-menu" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="menu close" id="menu">
+      <li>
+        <a href="accueil.html" class="home-link"><i class="fa-solid fa-house icon-home"></i><span
+            class="text-home">Accueil</span></a>
+      </li>
+      <li>
+        <a href="boutique.html"><span>Boutique</span></a>
+      </li>
+      <li>
+        <a href="erreur-404.html"><span>Qui sommes nous</span></a>
+      </li>
+      <li>
+        <a href="erreur-404.html"><span>Blog</span></a>
+      </li>
+      <li>
+        <a href="contact.html"><span>Contact</span></a>
+      </li>
+    </ul>
+  </nav>
+  <a href="panier.html" class="basket-link" title="voir le panier">
+    <ul class="infos-basket number">
+      <li class="price" id="basket-price"></li>
+      <li class="items" id="basket-items"></li>
+      <li class="basket"><i class="fa-solid fa-basket-shopping icon-basket"></i></li>
+    </ul>
+  </a>
+
+</div>
+  </header>
+  <!-- ########## CONTENT ########## -->
+  <main class="contact">
+    <section>
+      <h1>Contactez nous</h1>
+      <p>Nous vous répondons dans les meilleur délais</p>
+      <!--form-->
+      <form action="erreur-404.html" method="POST">
+        <p class="small">* Champ obligatoire</p>
+
+        <div class="infos">
+          <div class="inputs">
+            <div>
+              <label for="name">Votre nom *</label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div>
+              <label for="email">Votre email *</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div>
+              <label for="tel">Votre Téléphone</label>
+              <input type="tel" name="tel" id="tel" />
+            </div>
+          </div>
+          <label for="message">Votre message *</label>
+          <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+        </div>
+
+        <div class="acceptance">
+          <input type="checkbox" name="check" id="check" required />
+          <label for="check">J'accepte les conditions si dessous *</label>
+          <p class="small">
+            En cochant cette case vous donnez votre accord pour que vos
+            données personnelles soient utilisées pour vous recontacter dans
+            le cadre de votre demande. Pour connaître vos droits concernant
+            l'utilisation de données collectés, veuillez consulter notre
+            <a href="lol.html">politique de confidentialité</a>.
+          </p>
+        </div>
+        <button class="btn">Envoyer</button>
+      </form>
+    </section>
+    <section class="infos-contact">
+      <h2>Nos coordonnées</h2>
+      <address>
+        <p>
+          Clinique Richenou<br />
+          666 rue de l'impasse<br />
+          66666 Neverland
+        </p>
+        <p><a href="tel:+33966666666">+33 9 66 66 66 66</a></p>
+      </address>
+      <!--map-->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.8509172863937!2d6.234508514771839!3d46.193525292503715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c6ff7e0ef5a49%3A0xdc63d5ca7a807782!2sDigifab%20Annemasse!5e0!3m2!1sfr!2sfr!4v1656001398791!5m2!1sfr!2sfr"
+          width="400" height="300" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+  <!-- ########## FOOTER ########## -->
+  <footer>
+    <div>
+  <li><a href="erreur-404.html">Informations de livraison</a></li>
+  <li><a href="erreur-404.html">Moyen de paiement</a></li>
+  <li><a href="erreur-404.html">Questions fréquentes</a></li>
+</div>
+
+<div>
+  <li><a href="erreur-404.html">Mentions légales</a></li>
+  <li><a href="erreur-404.html">Conditions générales de vente</a></li>
+  <li><a href="erreur-404.html">Politique de confidentialité</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</div>
+
+<div>
+  <address>
+    <p>
+      Clinique Richenou<br />
+      666 rue de l'impasse<br />
+      66666 Neverland
+    </p>
+    <p class="number"><a href="tel:+33966666666">+ 33 9 66 66 66 66</a></p>
+  </address>
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
+</div>
+  </footer>
+  <script src="js/script.js"></script>
+<script src="js/basket.js"></script>
+</body>
+
+</html>

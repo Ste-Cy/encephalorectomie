@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <%- include('ejs/partials/head.ejs') %>
+    <title>Expircuzépram® 200mg</title>
+    <meta name="description" content="Expircuzépram® 200mg" />
+</head>
+
+<body>
+  <!-- ########## HEADER ########## -->
+  <header>
+    <%- include('ejs/partials/header.ejs') %>
+  </header>
+  <!-- ########## CONTENT ########## -->
+  <main class="product-page">
+    <section class="product">
+      <img src="assets/img/medic.png" alt="Boite Expircuzépram" />
+      <div class="product-card">
+        <div class="product-infos">
+          <h1>Expircuzépram® 200mg</h1>
+          <p>Pour les encéphalorectomies de tous les jours</p>
+          <details>
+            <summary>Voir la composition</summary>
+            <ul>
+              <li>Poudreperlinpinpinium 200mg</li>
+              <li>
+                Excipients : eau distillée, saccharose, huiles essentielles.
+              </li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="product-purchase">
+          <p class="number"><s>29,99 €</s>20,99 €</p>
+          <div class="product-quant">
+            <label for="ref1-quant">Quantité</label>
+            <input type="number" value="1" min="1" step="1" autocomplete="off" id="ref1-quant" />
+          </div>
+          <button class="btn" id="ref1">Ajouter au panier</button>
+          <%- include('ejs/partials/basket-popup.ejs') %>
+        </div>
+      </div>
+    </section>
+    <section class="products-gallery">
+      <h2>Nos autres produits</h2>
+      <div class="products">
+        <%- include('ejs/partials/shop.ejs') %>
+      </div>
+    </section>
+  </main>
+
+  <!-- ########## FOOTER ########## -->
+  <footer>
+    <%- include('ejs/partials/footer.ejs') %>
+  </footer>
+  <%- include('ejs/partials/scripts.ejs') %>
+</body>
+
+</html>

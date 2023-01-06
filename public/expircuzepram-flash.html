@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/styles.css" />
+<script src="https://kit.fontawesome.com/d16b05e8a9.js" crossorigin="anonymous"></script>
+
+    <title>Expircuzépram® 200mg FLASH</title>
+    <meta name="description" content="Expircuzépram® 200mg FLASH" />
+</head>
+
+<body>
+  <!-- ########## HEADER ########## -->
+  <header>
+    <!--Topbar-->
+<div class="topbar" id="topbar">
+  <div class="contact number">
+    <p class="tel"><a href="tel:+33966666666">+ 33 9 66 66 66 66</a></p>
+    <p class="mail"><a href="mailto:contact@richenou.com">contact@richenou.com</a></p>
+  </div>
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
+
+</div>
+<!--navbar-->
+<div class="navbar" id="navbar">
+  <nav>
+    <div class="icon-menu" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="menu close" id="menu">
+      <li>
+        <a href="accueil.html" class="home-link"><i class="fa-solid fa-house icon-home"></i><span
+            class="text-home">Accueil</span></a>
+      </li>
+      <li>
+        <a href="boutique.html"><span>Boutique</span></a>
+      </li>
+      <li>
+        <a href="erreur-404.html"><span>Qui sommes nous</span></a>
+      </li>
+      <li>
+        <a href="erreur-404.html"><span>Blog</span></a>
+      </li>
+      <li>
+        <a href="contact.html"><span>Contact</span></a>
+      </li>
+    </ul>
+  </nav>
+  <a href="panier.html" class="basket-link" title="voir le panier">
+    <ul class="infos-basket number">
+      <li class="price" id="basket-price"></li>
+      <li class="items" id="basket-items"></li>
+      <li class="basket"><i class="fa-solid fa-basket-shopping icon-basket"></i></li>
+    </ul>
+  </a>
+
+</div>
+  </header>
+
+  <!-- ########## CONTENT ########## -->
+  <main class="product-page">
+    <section class="product">
+      <img src="assets/img/medic.png" alt="Boite Expircuzépram" />
+      <div class="product-card">
+        <div class="product-infos">
+          <h1>Expircuzépram® 200mg FLASH</h1>
+          <p>Pour un soulagement rapide des encéphalorectomies.</p>
+          <details>
+            <summary>Voir la composition</summary>
+            <ul>
+              <li>Poudreperlinpinpinium 200mg</li>
+              <li>
+                Excipients : eau distillée, saccharose, arsenic, huiles
+                essentielles
+              </li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="product-purchase">
+          <p class="number"><s>34,99 €</s>24,49 €</p>
+          <div class="product-quant">
+            <label for="ref3-quant">Quantité</label>
+            <input type="number" value="1" min="1" step="1" autocomplete="off" id="ref3-quant" />
+          </div>
+          <button class="btn" id="ref3">Ajouter au panier</button>
+          <dialog class="basket-popup" id="basket-popup">
+  <span>Le produit est bien ajouté à votre panier</span>
+  <div class="wrapper">
+    <button id="backet-popup-close" class="btn">continuer mes achats</button>
+    <button class="btn btn-alt"><a href="panier.html">Voir le panier</a></button>
+  </div>
+</dialog>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-gallery">
+      <h2>Nos autres produits</h2>
+      <div class="products">
+        <button id="product-prev" class="slideshow-btn">
+  <i class="fa-solid fa-angle-left"></i>
+</button>
+
+<div class="products-content">
+  <a href="expircuzepram-200mg.html" class="product-display" id="product-1">
+    <img src="assets/img/medic.png" alt="Boite Expircuzépram" />
+    <div class="content">
+      <h3>Expircuzépram® 200mg</h3>
+      <p>Pour les encéphalorectomies de tous les jours.</p>
+    </div>
+  </a>
+
+  <a href="expircuzepram-flash.html" id="product-2">
+    <img src="assets/img/medic.png" alt="Boite Expircuzépram" />
+    <div class="content">
+      <h3>Expircuzépram® 200mg FLASH</h3>
+      <p>Pour un soulagement rapide des encéphalorectomies.</p>
+    </div>
+  </a>
+
+  <a href="expircuzepram-400mg.html" id="product-3">
+    <img src="assets/img/medic.png" alt="Boite Expircuzépram" />
+    <div class="content">
+      <h3>Expircuzépram® 400mg</h3>
+      <p>Traitement d’attaque des encéphalorectomies difficiles</p>
+    </div>
+  </a>
+
+  <a href="expircuzepram-kids.html" id="product-4">
+    <img src="assets/img/medic.png" alt="Boite Expircuzépram" />
+    <div class="content">
+      <h3>Expircuzépram® 200mg KIDS</h3>
+      <p>
+        Pour les enfants de moins de 12 ans. Goût fraise-chocolat-cola-prout.
+      </p>
+    </div>
+  </a>
+</div>
+<button id="product-next" class="slideshow-btn">
+  <i class="fa-solid fa-angle-right"></i>
+</button>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ########## FOOTER ########## -->
+  <footer>
+    <div>
+  <li><a href="erreur-404.html">Informations de livraison</a></li>
+  <li><a href="erreur-404.html">Moyen de paiement</a></li>
+  <li><a href="erreur-404.html">Questions fréquentes</a></li>
+</div>
+
+<div>
+  <li><a href="erreur-404.html">Mentions légales</a></li>
+  <li><a href="erreur-404.html">Conditions générales de vente</a></li>
+  <li><a href="erreur-404.html">Politique de confidentialité</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</div>
+
+<div>
+  <address>
+    <p>
+      Clinique Richenou<br />
+      666 rue de l'impasse<br />
+      66666 Neverland
+    </p>
+    <p class="number"><a href="tel:+33966666666">+ 33 9 66 66 66 66</a></p>
+  </address>
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
+</div>
+  </footer>
+  <script src="js/script.js"></script>
+<script src="js/basket.js"></script>
+</body>
+
+</html>

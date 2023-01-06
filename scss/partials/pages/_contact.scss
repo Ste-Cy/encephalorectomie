@@ -1,0 +1,112 @@
+.contact {
+
+  @include desktop-up {
+    display: flex;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    @include tablet-up {
+      width: 320px;
+      align-self: center;
+      font-size: 1.25rem;
+    }
+
+    @include desktop-up {
+      width: 160px;
+      align-self: center;
+      font-size: 1.375rem;
+    }
+  }
+
+  .small,
+  label {
+    font-size: 0.75rem;
+
+    @include tablet-up {
+      font-size: 1rem;
+    }
+  }
+}
+
+.infos {
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: $size-base * 2;
+    font-family: $font;
+
+    @include tablet-up {
+      font-size: 1rem;
+    }
+  }
+
+
+  input {
+    height: 32px;
+  }
+
+  label {
+    background-color: white;
+    padding: 0 $size-base;
+    position: relative;
+    left: $size-base;
+    top: 8px;
+  }
+
+  *:focus {
+    outline-color: $primary-color;
+  }
+}
+
+.inputs {
+  @include desktop-up {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      width: 30%;
+    }
+  }
+}
+
+.acceptance p {
+  padding: $size-base;
+
+}
+
+
+
+.infos-contact {
+  background-color: $secondary-color;
+
+
+  @include desktop-up {
+    min-width: 300px;
+    width: 80%;
+  }
+}
+
+address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @include link;
+}
+
+.map {
+  display: none;
+
+  @include tablet-up {
+    margin-top: $size-base * 4;
+    display: flex;
+    justify-content: center;
+  }
+}

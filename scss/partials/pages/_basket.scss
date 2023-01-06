@@ -1,0 +1,113 @@
+.basket-page {
+    padding: $size-base * 2;
+}
+
+.basket-empty {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    p {
+        margin-right: $size-base;
+    }
+}
+
+.basket-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    @include desktop-up {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+}
+
+
+.basket-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+    table {
+        padding: $size-base;
+        box-shadow: 0 0 15px #2C3E50;
+        margin-bottom: $size-base;
+        font-size: 0.75rem;
+
+        @include tablet-up {
+            font-size: 1rem;
+        }
+
+        @include tablet-up {
+            font-size: 0.75rem;
+        }
+    }
+
+
+    thead {
+        border-bottom: 1px solid $text-color;
+        font-size: inherit;
+    }
+
+    td,
+    th {
+        width: 150px;
+        text-align: center;
+        padding: $size-base;
+    }
+
+    td:nth-child(1) {
+        width: 250px;
+        text-align: center;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: $secondary-color;
+    }
+
+    button {
+        margin-top: $size-base;
+        align-self: flex-end;
+    }
+}
+
+.order {
+    width: 100%;
+    margin-top: $size-base * 4;
+    margin-left: $size-base;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondary-color;
+    padding: $size-base * 2;
+    border-radius: 10px;
+
+    @include desktop-up {
+        margin-top: 0;
+        max-width: 30vw;
+        font-size: 1rem;
+    }
+
+
+
+
+    li {
+        text-align: right;
+    }
+
+    li:nth-child(1) {
+        font-weight: bolder;
+    }
+
+    li:nth-child(3) {
+        margin: $size-base 0;
+        font-weight: bolder;
+        color: $primary-color;
+    }
+}

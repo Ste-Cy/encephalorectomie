@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/styles.css" />
+<script src="https://kit.fontawesome.com/d16b05e8a9.js" crossorigin="anonymous"></script>
+
+    <title>Votre panier</title>
+    <meta name="description" content="Votre pannier" />
+</head>
+
+<body>
+  <!-- ########## HEADER ########## -->
+  <header>
+    <!--Topbar-->
+<div class="topbar" id="topbar">
+  <div class="contact number">
+    <p class="tel"><a href="tel:+33966666666">+ 33 9 66 66 66 66</a></p>
+    <p class="mail"><a href="mailto:contact@richenou.com">contact@richenou.com</a></p>
+  </div>
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
+
+</div>
+<!--navbar-->
+<div class="navbar" id="navbar">
+  <nav>
+    <div class="icon-menu" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="menu close" id="menu">
+      <li>
+        <a href="accueil.html" class="home-link"><i class="fa-solid fa-house icon-home"></i><span
+            class="text-home">Accueil</span></a>
+      </li>
+      <li>
+        <a href="boutique.html"><span>Boutique</span></a>
+      </li>
+      <li>
+        <a href="erreur-404.html"><span>Qui sommes nous</span></a>
+      </li>
+      <li>
+        <a href="erreur-404.html"><span>Blog</span></a>
+      </li>
+      <li>
+        <a href="contact.html"><span>Contact</span></a>
+      </li>
+    </ul>
+  </nav>
+  <a href="panier.html" class="basket-link" title="voir le panier">
+    <ul class="infos-basket number">
+      <li class="price" id="basket-price"></li>
+      <li class="items" id="basket-items"></li>
+      <li class="basket"><i class="fa-solid fa-basket-shopping icon-basket"></i></li>
+    </ul>
+  </a>
+
+</div>
+  </header>
+  <!-- ########## CONTENT ########## -->
+  <main class="basket-page">
+    <h1>Votre panier</h1>
+    <div class="basket-empty" id="basket-empty">
+      <p>Votre panier est vide</p>
+      <a class="btn" href="boutique.html">Voir nos produits</a>
+    </div>
+
+    <div class="basket-content" id="basket" hidden>
+      <div class="basket-tab">
+        <table class="number">
+          <thead>
+            <tr>
+              <th>Produit</th>
+              <th>Prix</th>
+              <th>Quantité</th>
+              <th>Sous total</th>
+            </tr>
+          </thead>
+          <tbody id="tab-data"></tbody>
+        </table>
+        <button class="btn btn-alt" id="delete-basket">Vider le panier</button>
+      </div>
+      <div class="order">
+        <ul>
+          <li id="order-subtotal">Total produits : <span class="number"></span></li>
+          <li id="order-shipping">Frais de port : <span class="number"></span></li>
+          <li id="order-total">Total (TTC) : <span class="number"></span></li>
+        </ul>
+        <a href="erreur-404.html" class="btn">Je commande !</a>
+      </div>
+    </div>
+  </main>
+  <!-- ########## FOOTER ########## -->
+  <footer>
+    <div>
+  <li><a href="erreur-404.html">Informations de livraison</a></li>
+  <li><a href="erreur-404.html">Moyen de paiement</a></li>
+  <li><a href="erreur-404.html">Questions fréquentes</a></li>
+</div>
+
+<div>
+  <li><a href="erreur-404.html">Mentions légales</a></li>
+  <li><a href="erreur-404.html">Conditions générales de vente</a></li>
+  <li><a href="erreur-404.html">Politique de confidentialité</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</div>
+
+<div>
+  <address>
+    <p>
+      Clinique Richenou<br />
+      666 rue de l'impasse<br />
+      66666 Neverland
+    </p>
+    <p class="number"><a href="tel:+33966666666">+ 33 9 66 66 66 66</a></p>
+  </address>
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
+</div>
+  </footer>
+  <script src="js/script.js"></script>
+<script src="js/basket.js"></script>
+</body>
+
+</html>
